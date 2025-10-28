@@ -12,7 +12,3 @@ VALUES
     (ST_SetSRID(ST_MakePoint(8.36093, 49.03174), 4326)),
     (ST_SetSRID(ST_MakePoint(8.39876, 49.00644), 4326));
 
---zmiana ukladu
-ALTER TABLE input_points
-ALTER COLUMN geom TYPE geometry(Point, 3068)
-USING ST_Transform(geom, 3068);
